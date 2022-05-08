@@ -533,52 +533,6 @@ li a:hover {
 
 
 
-.portfolio_content img {
-    width: 350px;
-    height: 250px;
-    border-radius: 10px;
-    justify-self: center;
-    margin-bottom: 3rem;
-    
-
-}
-
-
-
-.portfolio_data h3 {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: .5rem;
-}
-.portfolio_data p {
-    font-size: 1.2rem;
-    color:rgba(0, 0, 0, 0.589);
-    font-weight: 600;
-}
-
-.portfolio_data a {
-    
-    margin-top: 3.5rem;
- 
-}
-.portfolio_button .button_icon {
-    font-size: 1.1rem;
-    
-}
-
-.swiper-button-next::after,
-.swiper-button-prev::after {
-    display: none;
-}
-
-.swiper_icon {
-    font-size: 5rem;
-    color: #7B78F1;
-}
-
-.swiper-pagination-bullet-active {
-    background-color: #7B78F1;
-}
 
 /* Reviews */
 
