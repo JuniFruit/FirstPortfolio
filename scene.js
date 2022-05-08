@@ -20,13 +20,14 @@ const color2 = new THREE.Color("rgb(255, 255, 255");
 
 //Camera
 const camera = new THREE.PerspectiveCamera( 75, 600 / 700, 0.1, 200 );
-camera.position.z = 250;
-camera.position.x = 25;
+camera.position.z = 230;
+camera.position.x = -3;
 camera.position.y = 0;
 
 //Renderer
 const renderer = new THREE.WebGLRenderer({antialiases: true, alpha: true});
 renderer.setSize( 600, 700, false );
+console.log(innerHeight/2)
 
 renderer.shadowMap.enabled = true;
 renderer.shadowMap.type = THREE.PCFSoftShadowMap;
