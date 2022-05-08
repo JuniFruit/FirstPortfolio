@@ -65,7 +65,7 @@ a {
 
 .section {
     margin: 0 auto;
-    max-width: 1280px;
+    max-width: 1000px;
     padding: 0 1rem;
     
     
@@ -75,7 +75,7 @@ a {
 
 .section_title {
     margin: 7rem 0 5rem 0;
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     text-align: center;
 }
 
@@ -320,15 +320,17 @@ li a:hover {
 
 
 .about_content img {
-    height: 350px;
+    height: 250px;
     border-radius: .5rem;
     width: 380px;
     justify-self: center;
+    margin: 1rem 0;
+    object-fit: cover;
 }
 
 .about_description p {
-    font-size: 1.5rem;
-    font-weight: 600;
+    font-size: 1.3rem;
+    font-weight: 500;
     color: rgba(46, 42, 42, 0.582);
 }
 
@@ -369,7 +371,7 @@ li a:hover {
 }
 
 .skill_drop-title {
-    font-size: 2rem;
+    font-size: 1.7rem;
     font-weight: 700;
 }
 
@@ -443,6 +445,9 @@ li a:hover {
 
 /* Qualifications */
 
+.qualification h2 {
+    margin-top: 1.5rem;
+}
 .qualification_tabs {
     display: flex;
     justify-content: space-evenly;
@@ -535,9 +540,56 @@ li a:hover {
 }
 
 /* Portfolio */
+.portfolio_wrapper span {
+    font-size: 1.25rem;
+    color:#7B78F1;
 
+}
 
+.portfolio_section h2 {
+    margin-top: 1.5rem;
+}
 
+.portfolio_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.portfolio_content {
+    grid-gap: 3rem;
+    grid-template-columns: max-content;
+   
+
+}
+
+.portfolio_content img {
+    height: 200px;
+    border-radius: .5rem;
+    width: 350px;
+    justify-self: center;
+    object-fit: cover;
+    
+}
+
+.demo_button {
+    grid-row: 1;
+    grid-column: 2;
+    align-self: flex-end;
+}
+.portfolio_description {
+    grid-row: 1;
+    grid-column: 2;
+    padding: 1rem 0 1rem 0;
+}
+.portfolio_description h3 {
+    font-size: 1.5rem;
+}
+.portfolio_description p {
+    font-size: 1.25rem;
+    margin-top: .5rem;
+    
+}
 
 
 /* Reviews */
