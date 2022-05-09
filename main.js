@@ -1,5 +1,5 @@
 
-
+// Qualification and Expirience section //
 const skillsContent = document.getElementsByClassName('skills_content');
 const skillsHeader = document.querySelectorAll('.skills_header');
 
@@ -35,22 +35,7 @@ workButton.addEventListener('click', () => {
     workContent.style.display = 'block';
 })
 
-var swiperPortfolio = new Swiper(".portfolio_container", {
-    cssMode: true,
-    loop: true,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-      dynamicBullets: false,
-    },
-    mousewheel: true,
-    keyboard: true,
-  });
-
+// Reviews swiper //
 var swiperReviews = new Swiper(".reviews_content", {
     loop: true,
     grabCursor: true,
@@ -80,3 +65,29 @@ var swiperReviews = new Swiper(".reviews_content", {
   //   dropMenu.classList.remove('drop_menu-active');
   // })
   
+
+  //Carousel//
+
+  const portfolioContent = document.querySelectorAll('.portfolio_content');
+  const rightHandler = document.querySelector('.right_handle');
+  const leftHandler = document.querySelector('.left_handle');
+  
+  //console.log (getComputedStyle(portfolioContent).getPropertyValue("--handle-index"))
+  console.log(rightHandler)
+  
+  rightHandler.addEventListener('click', () => {
+    
+    let index = getComputedStyle(portfolioContent).getPropertyValue("--handle-index");
+    index++
+    portfolioContent.style.setProperty("--handle-index", index);
+    //console.log(portfolioContent.style.getPropertyValue('--handle-index'))
+  })
+  leftHandler.addEventListener('click', () => {
+    
+    let index = getComputedStyle(portfolioContent).getPropertyValue("--handle-index")
+    portfolioContent.style.setProperty("--handle-index", index - 1);
+    //console.log(portfolioContent.style.getPropertyValue('--handle-index'))
+  })
+
+
+  console.log(index);
