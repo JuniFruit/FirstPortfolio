@@ -8,5 +8,5 @@ Testing features and things such as
 * Making it responsive
 * Making it work with a server
 
-![Http web-site]
+![web-site]
 (https://github.com/JuniFruit/FirstPortfolio/blob/changes/readme.md);
