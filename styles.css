@@ -568,7 +568,7 @@ li a:hover {
 .portfolio_content_wrap {
     display: flex;
     
-    overflow-x: hidden;
+    overflow-x: scroll;
 }
 
 .portfolio_wrapper {

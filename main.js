@@ -69,25 +69,33 @@ var swiperReviews = new Swiper(".reviews_content", {
   //Carousel//
 
   const portfolioContent = document.querySelectorAll('.portfolio_content');
-  const rightHandler = document.querySelector('.right_handle');
-  const leftHandler = document.querySelector('.left_handle');
-  
-  //console.log (getComputedStyle(portfolioContent).getPropertyValue("--handle-index"))
-  console.log(rightHandler)
-  
-  rightHandler.addEventListener('click', () => {
-    
-    let index = getComputedStyle(portfolioContent).getPropertyValue("--handle-index");
-    index++
-    portfolioContent.style.setProperty("--handle-index", index);
-    //console.log(portfolioContent.style.getPropertyValue('--handle-index'))
-  })
-  leftHandler.addEventListener('click', () => {
-    
-    let index = getComputedStyle(portfolioContent).getPropertyValue("--handle-index")
-    portfolioContent.style.setProperty("--handle-index", index - 1);
-    //console.log(portfolioContent.style.getPropertyValue('--handle-index'))
-  })
+  const handlers = document.querySelectorAll('#handler');
+  console.log(portfolioContent)
+
+  let index = 0;
+
+  handlers.forEach(item => { item.addEventListener('click', (e) => {
+
+    if (e.target.closest('#handler') === document.querySelector('.right_handle') ) {
+        index++;
+        
+    };
+    if (e.target.closest('#handler') === document.querySelector('.left_handle')) {
+        index -= 1;
+    }
+    moveContent(index)
+    })
+   })
 
 
-  console.log(index);
+ 
+  const moveContent = (index) => {
+
+      portfolioContent.forEach(item => {
+          item.style.setProperty('--handle-index', index);
+      })
+
+  }
+ 
+
+ 
